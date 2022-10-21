@@ -5,80 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dice.css">
     <title>Dice App</title>
-    <style>
-        body{
-            background-image: url(https://cdn.pixabay.com/photo/2018/01/29/18/16/cube-3116778__340.jpg);
-            background-size: cover;
-            opacity: 50;
-            width: 100%;
-        }
-        #container{
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-align: center;
-            width: 50%;
-            height: auto;
-            margin: auto;
-            margin-top: 2%;
-        }
-        #container > div{
-            display: flex;
-            justify-content: space-around;
-            width: auto;
-        }
-
-        #winner{
-            font-weight: bolder;
-            width: 60%;
-            font-size: larger;
-            background-color: rgb(251, 248, 248);
-            color: rgb(23, 3, 3);
-            border: 1px solid black;
-            border-radius: 8px;
-            height: 40px;
-            margin-bottom: 5%;
-            padding-top: 2%;
-        }
-        #member-1,
-        #member-2,
-        #member-3{
-            align-items: center;
-            text-align: center;
-            border: 5px solid rgb(251, 248, 248);
-            border-radius: 10px;
-            padding-top: 4%;
-            padding-bottom: 0%;
-            width: 50px;
-            height: 50px;
-            color: rgb(238, 245, 246);
-            font-size: x-large;
-            font-weight: bolder;
-        }
-        button{
-            font-weight: bolder;
-            padding: 1%;
-            margin-top: 1%;
-            background-color: rgb(250, 146, 207);
-            color: rgb(0, 7, 9);
-            border: 5px solid white;
-            border-radius: 15px;
-            text-decoration: none;
-        }
-        h5{
-            background-color: white;
-            padding: 1% 3% 1% 3%;
-            border-radius: 3px;
-        }
-        h1{
-            color: white;
-        }
-    </style>
 </head>
 <body><img src="" alt="">
     <div id="container">
-        <div><h1>Dice-Rolling</h1> </div>
+        
+        <div><center><h1>Dice-Rolling</h1></center> </div>
         <div id="winner"></div>
-        <div>
+        <div id="tetrad">
             <div>
                 <div id="member-1">A</div>
                 <h5>Member A</h5>
@@ -92,140 +27,12 @@
                 <h5>Member C</h5>
             </div>
         </div>
-        <button id="roll">ROLL THE DICE</button>
+        <center>
+            <button id="roll">ROLL THE DICE</button>
+        </center>
     </div>
     
 </body>
 </html>
 
-<script>
-    document.getElementById("roll").addEventListener("click", rollDice);
-
-    function rollDice(){
-        let A = document.getElementById("member-1").innerText=Math.floor(Math.random()*(6-1+1))+1;
-         let B = document.getElementById("member-2").innerText=Math.floor(Math.random()*(6-1+1))+1;
-         let C = document.getElementById("member-3").innerText=Math.floor(Math.random()*(6-1+1))+1;
-        
-
-
-         if(A==B && B==C && A==C){
-            document.getElementById("member-1").style.backgroundColor = "blue";
-            document.getElementById("member-3").style.backgroundColor = "blue";
-            document.getElementById("member-2").style.backgroundColor = "blue";
-            
-            document.getElementById("member-1").style.color = "white";
-            document.getElementById("member-3").style.color = "white";
-            document.getElementById("member-2").style.color = "white";
-
-            document.getElementById("winner").innerText="All are equal";
-        }
-
-
-
-
-         if(A==B && A!=C){
-            document.getElementById("member-1").style.backgroundColor = "blue";
-            document.getElementById("member-2").style.backgroundColor = "blue";
-            document.getElementById("member-3").style.backgroundColor = "white";
-
-            document.getElementById("member-1").style.color = "white";
-            document.getElementById("member-2").style.color = "white";
-            document.getElementById("member-3").style.color = "black";
-
-            document.getElementById("winner").innerText="Member A and Member B are equal";
-        }
-       
-        if(B==C && B!=A){
-            document.getElementById("member-2").style.backgroundColor = "blue";
-            document.getElementById("member-3").style.backgroundColor = "blue";
-            document.getElementById("member-1").style.backgroundColor = "white";
-
-            document.getElementById("member-3").style.color = "white";
-            document.getElementById("member-2").style.color = "white";
-            document.getElementById("member-1").style.color = "black";
-
-            document.getElementById("winner").innerText="Member C and Member B are equal";
-         }
-
-        if(A==C && A!=B){
-            document.getElementById("member-1").style.backgroundColor = "blue";
-            document.getElementById("member-3").style.backgroundColor = "blue";
-            document.getElementById("member-2").style.backgroundColor = "white";
-
-            document.getElementById("member-1").style.color = "white";
-            document.getElementById("member-3").style.color = "white";
-            document.getElementById("member-2").style.color = "black";
-            document.getElementById("winner").innerText="Member A and Member C are equal";
-        }
-
-        
-
-
-        if(A > B && B > C){
-            document.getElementById("member-1").style.backgroundColor = "green";
-            document.getElementById("member-2").style.backgroundColor = "yellow";
-            document.getElementById("member-3").style.backgroundColor = "red";
-
-            document.getElementById("winner").innerText="Member A";
-
-            document.getElementById("member-1").style.color = "black";
-            document.getElementById("member-2").style.color = "black";
-            document.getElementById("member-3").style.color = "black";
-        }
-        if(A > C && C > B){
-            document.getElementById("member-1").style.backgroundColor = "green";
-            document.getElementById("member-3").style.backgroundColor = "yellow";
-            document.getElementById("member-2").style.backgroundColor = "red";
-            document.getElementById("winner").innerText="Member A";
-
-            document.getElementById("member-1").style.color = "black";
-            document.getElementById("member-2").style.color = "black";
-            document.getElementById("member-3").style.color = "black";
-        }
-
-
-
-        if(B > A && A > C){
-            document.getElementById("member-2").style.backgroundColor = "green";
-            document.getElementById("member-1").style.backgroundColor = "yellow";
-            document.getElementById("member-3").style.backgroundColor = "red";
-            document.getElementById("winner").innerText="Member B";
-
-            document.getElementById("member-1").style.color = "black";
-            document.getElementById("member-2").style.color = "black";
-            document.getElementById("member-3").style.color = "black";
-        }
-        if(B > C && C > A){
-            document.getElementById("member-2").style.backgroundColor = "green";
-            document.getElementById("member-3").style.backgroundColor = "yellow";
-            document.getElementById("member-1").style.backgroundColor = "red";
-            document.getElementById("winner").innerText="Member B";
-
-            document.getElementById("member-1").style.color = "black";
-            document.getElementById("member-2").style.color = "black";
-            document.getElementById("member-3").style.color = "black";
-        }
-
-        if(C > A && A > B){
-            document.getElementById("member-3").style.backgroundColor = "green";
-            document.getElementById("member-1").style.backgroundColor = "yellow";
-            document.getElementById("member-2").style.backgroundColor = "red";
-            document.getElementById("winner").innerText="Member C";
-
-            document.getElementById("member-1").style.color = "black";
-            document.getElementById("member-2").style.color = "black";
-            document.getElementById("member-3").style.color = "black";
-        }
-        if(C > B && B > A){
-            document.getElementById("member-3").style.backgroundColor = "green";
-            document.getElementById("member-2").style.backgroundColor = "yellow";
-            document.getElementById("member-1").style.backgroundColor = "red";
-            document.getElementById("winner").innerText="Member C";
-
-            document.getElementById("member-1").style.color = "black";
-            document.getElementById("member-2").style.color = "black";
-            document.getElementById("member-3").style.color = "black";
-        }
-        
-    }
-</script>
+<script src="./dice.js"></script>
