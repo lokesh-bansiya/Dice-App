@@ -1,5 +1,18 @@
-# Dice-App
+# A mini Dice-Rolling App:
+  - It is a simple app where users can play dice rolling game.
 
+## About Project:-
+ - Individual Project
+## Tech-stacks:-
+ - HTML
+ - CSS
+ - JavaScript
+## Tools:-
+ - VS-Code
+ - GitHub
+ - Netlify
+ 
+# Description and Layout:-
 ![Screenshot (11979)](https://user-images.githubusercontent.com/105616033/197107204-dd5d3cdc-f18e-4d9f-9046-29c12fcd2e05.png)
 <br/>
 <br/>
