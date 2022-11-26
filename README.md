@@ -1,5 +1,13 @@
 # A mini Dice-Rolling App:
   - It is a simple app where users can play dice rolling game.
+<br/>
+<div>
+  Here in the Dice App I have generated the random numbers till 6 with the help of Math.random and Math.floor.
+  I have built when I was learning Advanced Javascript and I have created three different files js,html and css 
+  and I did this with the help of all these three files and tach-stacks.
+</div>
+
+<br/>
 
 ## About Project:-
  - Individual Project
@@ -18,11 +26,7 @@
 <br/>
 <br/>
 <br/>
-<div>
-  Here in the Dice App I have generated the random numbers till 6 with the help of Math.random and Math.floor.
-  I have built when I was learning Advanced Javascript and I have created three different files js,html and css 
-  and I did this with the help of all these three files and tach-stacks.
-</div>
+
 <br/>
 <br/>
 <h4 align="center">💻 Tech Stack</h4>
