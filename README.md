@@ -1,5 +1,4 @@
 # A mini Dice-Rolling App:
-  - It is a simple app where users can play dice rolling game.
 <br/>
 <div>
   Here in the Dice App I have generated the random numbers till 6 with the help of Math.random and Math.floor.
