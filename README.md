@@ -1,9 +1,7 @@
 # A mini Dice-Rolling App:
 <br/>
 <div>
-  Here in the Dice App I have generated the random numbers till 6 with the help of Math.random and Math.floor.
-  I have built when I was learning Advanced Javascript and I have created three different files js,html and css 
-  and I did this with the help of all these three files and tach-stacks.
+ Here in the Dice App, I have generated the random numbers till 6 with the help of Math. random and Math. floor. I built when I was learning Advanced JavaScript and I created three different files js, HTML, and CSS I did this with the help of all these three files and tach-stacks.
 </div>
 
 <br/>
