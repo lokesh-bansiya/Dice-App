@@ -1,8 +1,17 @@
 body{
-    display: block;
     background-image: url(https://cdn.pixabay.com/photo/2018/01/29/18/16/cube-3116778__340.jpg);
     background-size: cover;
-    opacity: 50;
+    background-repeat: no-repeat;
+    height: 100vh;
+    opacity: 200;
+    width: 100%;
+}
+
+#outerbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
     width: 100%;
 }
 
@@ -11,6 +20,7 @@ h1{
     color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
 #container{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
@@ -20,7 +30,6 @@ h1{
     width: 50%;
     height: auto;
     margin: auto;
-    margin-top: 2%;
 }
 #container > div{
     display: flex;
@@ -70,6 +79,11 @@ button{
     border-radius: 15px;
     text-decoration: none;
 }
+
+button:hover{
+    cursor: pointer;
+}
+
 h5{
     background-color: white;
     padding: 1% 3% 1% 3%;
@@ -79,14 +93,21 @@ h5{
 
 
 
-@media all and (min-width: 481px) and (max-width: 768px){
-    #container{
-        margin-top: 4%;
+@media all and (min-width: 581px) and (max-width: 768px){
+    body{
+        display: block;
+        background-image: url(https://images.pexels.com/photos/8830684/pexels-photo-8830684.jpeg?auto=compress&cs=tinysrgb&w=800);
+        height: 100vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 200;
+        width: 100%;
     }
 
     h1{
-        font-size: large;
-        color: white;
+        font-size: 45px;
+        color: rgb(13, 5, 0);
+        font-weight: bolder;
         font-family: Georgia, 'Times New Roman', Times, serif;
     }
 
@@ -95,19 +116,21 @@ h5{
     #member-3{
         align-items: center;
         text-align: center;
-        border: 5px solid rgb(251, 248, 248);
+        border: 5px solid rgb(3, 30, 1);
         border-radius: 10px;
         padding-top: 4%;
         padding-bottom: 0%;
+        background-color: antiquewhite;
         width: 38px;
         height: 30px;
-        color: rgb(238, 245, 246);
+        color: rgb(1, 78, 88);
         font-size: large;
         font-weight: bolder;
     }
 
     #winner{
         font-size: 13px;
+        background-color: antiquewhite;
     }
 
     h5{
@@ -117,16 +140,27 @@ h5{
 
     button{
         font-size: 10px;
+        border: 3px solid black;
+        font-size: 15px;
+        font-weight: bold;
+        width: fit-content;
+        padding: 1% 4%;
+        color: brown;
+        background-color: aquamarine;
     }
 }
-@media all and (min-width: 320px) and (max-width: 480px){
-    #container{
-        margin-top: 25%;
+@media all and (min-width: 300px) and (max-width: 580px){
+    body{
+        display: block;
+        background-image: url(https://images.pexels.com/photos/8489922/pexels-photo-8489922.jpeg?auto=compress&cs=tinysrgb&w=800);
+        background-size: cover;
+        opacity: 200;
+        width: 100%;
     }
 
     h1{
-        font-size: large;
-        color: white;
+        font-size: 20px;
+        color: rgb(63, 2, 2);
         font-family: Georgia, 'Times New Roman', Times, serif;
     }
 
@@ -135,19 +169,22 @@ h5{
     #member-3{
         align-items: center;
         text-align: center;
-        border: 5px solid rgb(251, 248, 248);
         border-radius: 10px;
         padding-top: 4%;
         padding-bottom: 0%;
         width: 38px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
         height: 30px;
-        color: rgb(238, 245, 246);
+        background-color: blanchedalmond;
+        border: 5px solid black;
+        color: rgb(0, 59, 67);
         font-size: large;
         font-weight: bolder;
     }
 
     #winner{
         font-size: 13px;
+        background-color: bisque;
     }
 
     h5{
@@ -155,7 +192,9 @@ h5{
         margin-top: 20%;
     }
     button{
-        width: 50%;
+        width: fit-content;
         font-size: 10px;
+        border: 2px solid teal;
+        padding: 2% 6%;
     }
 }
